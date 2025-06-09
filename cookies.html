@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Cookies Policy - Xensroot Garden Services</title>
+<style>
+  :root {
+    --font-sans: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+      Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    /* Blue green theme colors consistent with other pages */
+    --color-text-primary: #0b4a49; /* Dark teal blue-green */
+    --color-text-secondary: #4a6e6d; /* muted teal */
+    --color-bg: #ffffff;
+    --color-accent: #317773; /* medium teal */
+    --color-shadow: rgba(49, 119, 115, 0.1);
+    --color-shadow-hover: rgba(49, 119, 115, 0.2);
+    --border-radius: 0.75rem;
+    --max-width: 1200px;
+    --spacing-section-vertical: 4rem;
+    --spacing-section-horizontal: 1.5rem;
+    --transition-speed: 0.3s;
+  }
+
+  /* Reset and base styles */
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    font-family: var(--font-sans);
+    background-color: var(--color-bg);
+    color: var(--color-text-secondary);
+    line-height: 1.75;
+    font-size: 18px;
+  }
+  h1, h2, h3 {
+    color: var(--color-text-primary);
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-weight: 700;
+  }
+  h1 {
+    font-size: 3rem;
+    line-height: 1.2;
+    font-weight: 800;
+  }
+  h2 {
+    font-size: 2rem;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+  }
+  h3 {
+    font-size: 1.25rem;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  p, ul, ol {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    max-width: 900px;
+  }
+  ul, ol {
+    padding-left: 1.75rem;
+  }
+  a {
+    color: var(--color-accent);
+    text-decoration: none;
+    transition: color var(--transition-speed);
+  }
+  a:hover,
+  a:focus {
+    color: #1f5f59;
+    outline: none;
+  }
+
+  .container {
+    max-width: var(--max-width);
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: var(--spacing-section-horizontal);
+    padding-right: var(--spacing-section-horizontal);
+  }
+
+  header {
+    position: sticky;
+    top: 0;
+    background-color: var(--color-bg);
+    z-index: 1000;
+    box-shadow: 0 2px 6px var(--color-shadow);
+    padding: 1rem var(--spacing-section-horizontal);
+  }
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: var(--max-width);
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .logo {
+    font-weight: 800;
+    font-size: 1.5rem;
+    color: var(--color-text-primary);
+    letter-spacing: 0.05em;
+  }
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+  }
+  .nav-links a {
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--color-text-primary);
+    padding: 0.5rem 0;
+  }
+  .nav-links a:hover,
+  .nav-links a:focus {
+    color: var(--color-accent);
+    border-bottom: 3px solid var(--color-accent);
+  }
+
+  .hero {
+    text-align: center;
+    padding-top: 6rem;
+    padding-bottom: 4rem;
+    color: var(--color-text-primary);
+  }
+
+  section.content-section {
+    padding-top: var(--spacing-section-vertical);
+    padding-bottom: var(--spacing-section-vertical);
+  }
+  section.content-section > div {
+    margin-bottom: 3rem;
+  }
+
+  footer {
+    margin-top: 4rem;
+    padding: 2rem var(--spacing-section-horizontal);
+    background-color: #e1f0ed;
+    color: var(--color-text-primary);
+    font-size: 0.9rem;
+    text-align: center;
+  }
+  footer a {
+    color: var(--color-accent);
+    text-decoration: none;
+    font-weight: 600;
+  }
+  footer a:hover,
+  footer a:focus {
+    text-decoration: underline;
+    outline: none;
+  }
+
+  /* Cookie consent dialog styles */
+  #cookie-consent {
+    position: fixed;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--color-bg);
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 12px var(--color-shadow);
+    padding: 1.25rem 1.5rem;
+    max-width: 95vw;
+    width: 400px;
+    font-size: 0.95rem;
+    color: var(--color-text-secondary);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    z-index: 1100;
+  }
+  #cookie-consent p {
+    margin: 0;
+    color: var(--color-text-primary);
+  }
+  #cookie-consent-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.75rem;
+  }
+  #cookie-consent button {
+    border: none;
+    padding: 0.5rem 1rem;
+    font-weight: 600;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color var(--transition-speed), color var(--transition-speed);
+    font-size: 0.9rem;
+  }
+  #accept-cookies {
+    background-color: var(--color-accent);
+    color: white;
+  }
+  #accept-cookies:hover,
+  #accept-cookies:focus {
+    background-color: #255852;
+    outline: none;
+  }
+  #decline-cookies {
+    background-color: transparent;
+    color: var(--color-accent);
+    border: 2px solid var(--color-accent);
+  }
+  #decline-cookies:hover,
+  #decline-cookies:focus {
+    background-color: var(--color-accent);
+    color: white;
+    outline: none;
+  }
+
+  @media (max-width: 480px) {
+    #cookie-consent {
+      width: 90vw;
+      font-size: 0.9rem;
+    }
+    #cookie-consent-buttons {
+      flex-direction: column;
+      align-items: stretch;
+    }
+    #cookie-consent button {
+      width: 100%;
+    }
+  }
+</style>
+</head>
+<body>
+<header>
+  <nav role="navigation" aria-label="Primary Navigation" class="container">
+    <div class="logo" tabindex="0" aria-label="Xensroot Garden Logo">Xensroot Garden</div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Service</a>
+      <a href="cookies.html" aria-current="page">Cookies Policy</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+</header>
+<main>
+  <section class="hero" role="banner" aria-labelledby="cookies-title">
+    <div class="container">
+      <h1 id="cookies-title">Cookies Policy</h1>
+      <p>Learn about how Xensroot Garden Services uses cookies and similar tracking technologies to improve your experience and comply with legal requirements. Your informed consent is important to us.</p>
+    </div>
+  </section>
+
+  <section class="content-section container" aria-label="Cookies policy details">
+    <div>
+      <h2>1. Introduction</h2>
+      <p>This Cookies Policy explains what cookies are, how we use them on xensrootgarden.com, the types of cookies we use, and your choices regarding cookies. Cookies are small text files stored on your device when you visit websites, used for various purposes including improving your browsing experience.</p>
+      <p>By continuing to use our website, you consent to the use of cookies as described in this policy, unless you choose to disable them.</p>
+    </div>
+
+    <div>
+      <h2>2. What Are Cookies?</h2>
+      <p>Cookies are small data files that websites place on your browser or device when you visit. They enable websites to recognize your device on subsequent visits and remember important preferences and choices made during your sessions.</p>
+      <p>Cookies are widely used across the internet to make websites function more efficiently and to provide better user experiences.</p>
+    </div>
+
+    <div>
+      <h2>3. Types of Cookies We Use</h2>
+      <p>Xensroot Garden Services uses various types of cookies, including:</p>
+      <h3>3.1 Strictly Necessary Cookies</h3>
+      <p>These cookies are essential for the website to operate properly. They enable core functionalities like security, page navigation, and access to secure areas. Without these cookies, certain services you request cannot be provided.</p>
+
+      <h3>3.2 Performance and Analytics Cookies</h3>
+      <p>Performance cookies collect anonymous data on how visitors use our website. We use this data to analyze trends, track visitor activity, and improve the performance and design of the site. For example, we may track which pages are visited most often and how long visitors stay on pages.</p>
+
+      <h3>3.3 Functionality Cookies</h3>
+      <p>These cookies remember choices you make (such as language or region) and provide enhanced, personalized features. They may also be used to remember your login information to simplify your return visits.</p>
+
+      <h3>3.4 Targeting or Advertising Cookies</h3>
+      <p>These cookies may be used to deliver advertisements relevant to you and your interests. They may track your browsing activity across websites and are usually placed by third-party advertising networks. We only use targeting cookies with your explicit consent.</p>
+    </div>
+
+    <div>
+      <h2>4. Third-Party Cookies</h2>
+      <p>Some cookies we use are placed by third-party service providers to support analytics, advertising, and social media integrations. These third parties have their own privacy policies and cookie practices, over which we have no control.</p>
+      <p>Examples of third-party cookies may include those from Google Analytics, Facebook Pixel, or advertising networks used to enhance your experience or provide targeted ads.</p>
+    </div>
+
+    <div>
+      <h2>5. How We Use Cookies</h2>
+      <p>Cookies help us provide a better user experience by:</p>
+      <ul>
+        <li>Remembering your preferences and settings to personalize your experience</li>
+        <li>Enabling secure login and authentication</li>
+        <li>Analyzing website usage to improve functionality and content</li>
+        <li>Offering relevant offers, promotions, and advertisements</li>
+        <li>Complying with legal requirements such as cookie consent management</li>
+      </ul>
+    </div>
+
+    <div>
+      <h2>6. Your Choices Regarding Cookies</h2>
+      <p>You have control over which cookies you accept. Browser settings typically allow you to block or delete cookies, but please note that disabling essential cookies can limit your ability to use certain features on our website.</p>
+      <p>Below are ways you can manage your cookies:</p>
+      <ul>
+        <li><strong>Browser Settings:</strong> Adjust settings in your browser to control or disable cookies. Refer to your browser’s help resources for instructions.</li>
+        <li><strong>Cookie Consent Dialog:</strong> Use the consent banner on our website to accept or decline non-essential cookies.</li>
+        <li><strong>Opt-Out Tools:</strong> Use third-party tools such as Google Analytics opt-out browser add-on to prevent tracking.</li>
+      </ul>
+      <p>Note that opting out of cookies may limit some website features and affect your overall experience.</p>
+    </div>
+
+    <div>
+      <h2>7. Data Retention and Security</h2>
+      <p>Cookies and tracking technologies are retained for varying durations depending on their type and purpose. Session cookies expire once you close your browser, while persistent cookies remain on your device until expiry or deletion.</p>
+      <p>We take reasonable technical and organizational measures to protect the information collected through cookies from unauthorized access, alteration, or misuse.</p>
+    </div>
+
+    <div>
+      <h2>8. Legal Basis for Processing Cookies</h2>
+      <p>Where required by applicable law, we seek your consent before placing cookies other than those strictly necessary for our services. This policy serves to provide you transparent information about the cookies we use and your rights.</p>
+    </div>
+
+    <div>
+      <h2>9. Children’s Privacy</h2>
+      <p>Our website is not intended to attract children under 16 years of age. We do not knowingly use cookies to collect personal data from children without parental consent.</p>
+    </div>
+
+    <div>
+      <h2>10. Changes to This Cookies Policy</h2>
+      <p>We may update this Cookies Policy from time to time to reflect changes in our practices or legal requirements. We encourage you to revisit this page periodically to stay informed.</p>
+      <p>Significant changes affecting your rights or cookies use will be communicated through our website or direct notice.</p>
+    </div>
+
+    <div>
+      <h2>11. Contact Us</h2>
+      <p>If you have questions or concerns about our use of cookies or this Cookies Policy, please contact us:</p>
+      <address>
+        <strong>Xensroot Garden Services</strong><br />
+        47 W 13th St, New York, NY 10011, USA<br />
+        Phone: <a href="tel:+12345678900" aria-label="Call Xensroot Garden Services">+1 (234) 567-8900</a><br />
+        Email: <a href="mailto:privacy@xensrootgarden.com">privacy@xensrootgarden.com</a>
+      </address>
+    </div>
+  </section>
+</main>
+
+<footer id="contact" role="contentinfo" tabindex="0">
+  <p>Address: 47 W 13th St, New York, NY 10011, USA</p>
+  <p>Phone: <a href="tel:+12345678900" aria-label="Call Xensroot Garden Services">+1 (234) 567-8900</a></p>
+  <p>&copy; 2024 Xensroot Garden Services. All rights reserved.</p>
+</footer>
+
+<div id="cookie-consent" role="dialog" aria-live="polite" aria-label="Cookie consent dialog">
+  <p>We use cookies to enhance your browsing experience, analyze site traffic, and provide personalized content. By clicking "Accept Cookies," you consent to our use of cookies. You may decline by clicking "Decline Cookies" but some features may be limited.</p>
+  <div id="cookie-consent-buttons">
+    <button id="accept-cookies" type="button">Accept Cookies</button>
+    <button id="decline-cookies" type="button">Decline Cookies</button>
+  </div>
+</div>
+
+<script>
+  (function() {
+    const consentKey = 'xensroot_cookie_consent';
+    const dialog = document.getElementById('cookie-consent');
+    const acceptBtn = document.getElementById('accept-cookies');
+    const declineBtn = document.getElementById('decline-cookies');
+
+    function setConsent(value) {
+      try {
+        localStorage.setItem(consentKey, value);
+      } catch(e) {
+        // localStorage might be disabled
+      }
+      dialog.style.display = 'none';
+    }
+
+    function getConsent() {
+      try {
+        return localStorage.getItem(consentKey);
+      } catch(e) {
+        return null;
+      }
+    }
+
+    // Show consent dialog only if no consent choice stored
+    if (!getConsent()) {
+      dialog.style.display = 'flex';
+    } else {
+      dialog.style.display = 'none';
+    }
+
+    acceptBtn.addEventListener('click', () => {
+      setConsent('accepted');
+      // Reload to activate cookies if needed or run any scripts
+    });
+
+    declineBtn.addEventListener('click', () => {
+      setConsent('declined');
+      // Could load minimal scripts or none
+    });
+  })();
+</script>
+</body>
+</html>
+

@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Privacy Policy - Xensroot Garden Services</title>
+<style>
+  :root {
+    --font-sans: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+      Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    /* Blue green theme colors for privacy.html to match terms.html */
+    --color-text-primary: #0b4a49; /* Dark teal blue-green */
+    --color-text-secondary: #4a6e6d; /* muted teal */
+    --color-bg: #ffffff;
+    --color-accent: #317773; /* medium teal */
+    --border-radius: 0.75rem;
+    --shadow-light: 0 4px 8px rgba(49, 119, 115, 0.1);
+    --max-width: 1200px;
+    --spacing-section-vertical: 4rem;
+    --spacing-section-horizontal: 1.5rem;
+    --transition-speed: 0.3s;
+  }
+
+  /* Reset and base */
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    font-family: var(--font-sans);
+    background-color: var(--color-bg);
+    color: var(--color-text-secondary);
+    line-height: 1.75;
+    font-size: 18px;
+  }
+  h1, h2, h3 {
+    color: var(--color-text-primary);
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-weight: 700;
+  }
+  h1 {
+    font-size: 3rem;
+    line-height: 1.2;
+    font-weight: 800;
+  }
+  h2 {
+    font-size: 2rem;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+  }
+  h3 {
+    font-size: 1.25rem;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  p, ul, ol {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    max-width: 900px;
+  }
+  ul, ol {
+    padding-left: 1.75rem;
+  }
+  a {
+    color: var(--color-accent);
+    text-decoration: none;
+    transition: color var(--transition-speed);
+  }
+  a:hover,
+  a:focus {
+    color: #1f5f59;
+    outline: none;
+  }
+
+  .container {
+    max-width: var(--max-width);
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: var(--spacing-section-horizontal);
+    padding-right: var(--spacing-section-horizontal);
+  }
+
+  header {
+    position: sticky;
+    top: 0;
+    background-color: var(--color-bg);
+    z-index: 1000;
+    box-shadow: 0 2px 6px rgba(49, 119, 115, 0.25);
+    padding: 1rem var(--spacing-section-horizontal);
+  }
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: var(--max-width);
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .logo {
+    font-weight: 800;
+    font-size: 1.5rem;
+    color: var(--color-text-primary);
+    letter-spacing: 0.05em;
+  }
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+  }
+  .nav-links a {
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--color-text-primary);
+    padding: 0.5rem 0;
+  }
+  .nav-links a:hover,
+  .nav-links a:focus {
+    color: var(--color-accent);
+    border-bottom: 3px solid var(--color-accent);
+  }
+
+  .hero {
+    text-align: center;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    color: var(--color-text-primary);
+  }
+
+  section.privacy-content {
+    padding-top: var(--spacing-section-vertical);
+    padding-bottom: var(--spacing-section-vertical);
+  }
+  section.privacy-content > div {
+    margin-bottom: 3rem;
+  }
+
+  footer {
+    margin-top: 4rem;
+    padding: 2rem var(--spacing-section-horizontal);
+    background-color: #e1f0ed;
+    color: var(--color-text-primary);
+    font-size: 0.9rem;
+    text-align: center;
+  }
+  footer a {
+    color: var(--color-accent);
+    text-decoration: none;
+    font-weight: 600;
+  }
+  footer a:hover,
+  footer a:focus {
+    text-decoration: underline;
+    outline: none;
+  }
+
+  @media (max-width: 640px) {
+    h1 {
+      font-size: 2.25rem;
+    }
+    .container {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+  }
+</style>
+</head>
+<body>
+<header>
+  <nav role="navigation" aria-label="Primary Navigation" class="container">
+    <div class="logo" tabindex="0" aria-label="Xensroot Garden Logo">Xensroot Garden</div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="pravicy.html" aria-current="page">privay policy</a>
+      <a href="terms.html">Terms of Service</a>
+      <a href="cookies.html">Cookies Policy</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+</header>
+<main>
+  <section class="hero" role="banner" aria-labelledby="privacy-policy-title">
+    <div class="container">
+      <h1 id="privacy-policy-title">Privacy Policy</h1>
+      <p>Your privacy is critically important to us. This Privacy Policy explains how Xensroot Garden Services ("we," "us," or "our") collect, use, disclose, and protect your information when you visit our website or utilize our services.</p>
+    </div>
+  </section>
+
+  <section class="privacy-content container" aria-label="Privacy policy details">
+    <div>
+      <h2>1. Introduction</h2>
+      <p>At Xensroot Garden, protecting your personal data and privacy is a fundamental commitment. We are dedicated to transparency in our data handling practices and compliance with all applicable privacy laws and regulations globally, including but not limited to GDPR, CCPA, and other data protection statutes.</p>
+      <p>This Privacy Policy outlines the types of information we collect, how we use it, your choices regarding your data, and the protections we employ. It applies to all visitors and users of our website, mobile applications, and related services.</p>
+      <p>If you have any questions, concerns, or requests concerning this policy or your personal data, please contact us using the information provided in the “Contact Us” section below.</p>
+    </div>
+
+    <div>
+      <h2>2. Definitions and Key Terms</h2>
+      <p>Understanding this policy is easier if you know the following terms:</p>
+      <ul>
+        <li><strong>Personal Data:</strong> Any information relating to an identified or identifiable natural person.</li>
+        <li><strong>Processing:</strong> Any operation performed on Personal Data, such as collection, storage, use, or disclosure.</li>
+        <li><strong>Controller:</strong> The entity that determines the purposes and means of processing personal data. Here, Xensroot Garden Services.</li>
+        <li><strong>Processor:</strong> A third party processing data on behalf of the Controller.</li>
+        <li><strong>Cookies:</strong> Small files placed on your device to store information about your preferences and usage.</li>
+        <li><strong>Consent:</strong> Freely given, specific, informed, and unambiguous indication of your wishes by which you agree to our processing of your personal data.</li>
+      </ul>
+    </div>
+
+    <div>
+      <h2>3. Information We Collect</h2>
+      <p>We gather information to provide and enhance our services. This includes both information you provide voluntarily and information collected automatically.</p>
+
+      <h3>3.1 Personal Information You Provide To Us</h3>
+      <p>When you interact with our services, you may provide personal data such as:</p>
+      <ul>
+        <li>Full name, username, and contact details</li>
+        <li>Email address for communications and account management</li>
+        <li>Phone number for customer support and notifications</li>
+        <li>Billing and shipping addresses</li>
+        <li>Payment information securely handled via authorized third-party payment processors</li>
+        <li>Customer inquiries, feedback, or survey responses</li>
+        <li>Photos or content you submit, such as garden images for customization or support</li>
+      </ul>
+
+      <h3>3.2 Information Collected Automatically</h3>
+      <p>We collect certain information automatically through your use of our website and online services using technologies such as cookies, web beacons, and log files, including:</p>
+      <ul>
+        <li>Internet Protocol (IP) address</li>
+        <li>Browser type and version</li>
+        <li>Operating system</li>
+        <li>Referring URLs and pages visited</li>
+        <li>Pages accessed and time spent</li>
+        <li>Clickstream data and mouse movements</li>
+        <li>Device identifiers and mobile network information</li>
+        <li>Geolocation data, if you grant permission</li>
+      </ul>
+
+      <h3>3.3 Information from Third Parties</h3>
+      <p>In some cases, we may receive information about you from third-party sources, including:</p>
+      <ul>
+        <li>Integrations with social media platforms when you link or use account features</li>
+        <li>Marketing or advertising partners providing demographic or behavioral data</li>
+        <li>Public databases or credit check providers for verification purposes</li>
+      </ul>
+    </div>
+
+    <div>
+      <h2>4. How We Use Your Information</h2>
+      <p>Your information powers nearly every aspect of our services. We use your data for the following purposes:</p>
+      <ul>
+        <li>To provide and deliver personalized garden services and customer support</li>
+        <li>Process payments and billing transactions securely</li>
+        <li>Send timely updates, service reminders, and promotional communications (if consented)</li>
+        <li>Improve our website usability, service offerings, and customer experience</li>
+        <li>Perform marketing analyses, surveys, and customer feedback collection</li>
+        <li>Conduct fraud detection, risk assessment, and security management</li>
+        <li>Comply with legal obligations, court orders, or regulatory requests</li>
+        <li>Support investigation of abuse, unauthorized access, or breaches</li>
+      </ul>
+      <p>We only process personal data when legally permitted, such as with your consent, to fulfill a contract, comply with a legal obligation, or protect legitimate interests.</p>
+    </div>
+
+    <div>
+      <h2>5. Cookies and Tracking Technologies</h2>
+      <p>We use cookies and similar technologies to gather usage information and enhance your browsing experience. Cookies allow us to remember your preferences and offer personalized content.</p>
+      <p>Types of cookies we use:</p>
+      <ul>
+        <li><strong>Strictly Necessary Cookies:</strong> Essential for the website to function, such as session management and security.</li>
+        <li><strong>Performance Cookies:</strong> Collect aggregated data on site usage to help us improve performance and user interface.</li>
+        <li><strong>Functionality Cookies:</strong> Remember choices like language, region, or customized settings.</li>
+        <li><strong>Targeting and Advertising Cookies:</strong> Used to deliver relevant ads based on your interests and browsing behavior. We obtain your consent before placing these where legally required.</li>
+      </ul>
+      <p>You can control cookies by adjusting your browser settings to block or delete cookies. Please note that disabling certain cookies may affect features and usability.</p>
+    </div>
+
+    <div>
+      <h2>6. Data Security and Protection</h2>
+      <p>We take strong measures to protect your information:</p>
+      <ul>
+        <li>Encryption of data in transit using SSL/TLS protocols</li>
+        <li>Secure servers with firewalls and intrusion detection systems</li>
+        <li>Access controls limiting data access to authorized personnel only</li>
+        <li>Regular security audits and vulnerability testing</li>
+        <li>Employee training on data privacy and security</li>
+      </ul>
+      <p>Despite these protections, no system is completely secure. In the unlikely event of a breach affecting your data, we commit to promptly notify you and relevant authorities as required.</p>
+    </div>
+
+    <div>
+      <h2>7. Your Rights and Choices</h2>
+      <p>You have significant rights with respect to your personal information, including:</p>
+      <h3>7.1 Access and Correction</h3>
+      <p>You may request a copy of your personal data we hold and ask us to correct any inaccuracies.</p>
+
+      <h3>7.2 Deletion</h3>
+      <p>Where applicable, you have the right to request the deletion or erasure of your personal data, subject to reasonable exceptions for legal or contractual obligations.</p>
+
+      <h3>7.3 Objection and Restriction</h3>
+      <p>You can object to or restrict certain types of data processing, particularly related to marketing and profiling.</p>
+
+      <h3>7.4 Data Portability</h3>
+      <p>You may request your information in a structured, machine-readable format and transfer it to another service provider.</p>
+
+      <h3>7.5 Withdraw Consent</h3>
+      <p>Where processing is based on your consent, you may withdraw that consent at any time, without affecting prior processing.</p>
+
+      <h3>7.6 Lodge a Complaint</h3>
+      <p>If you believe your rights have been violated, you have the right to file a complaint with your local data protection authority.</p>
+
+      <p>To exercise these rights, please contact us using the details provided below. We strive to respond promptly and transparently.</p>
+    </div>
+
+    <div>
+      <h2>8. Sharing Your Information</h2>
+      <p>We limit sharing of your personal data and only with trusted entities necessary to operate our services:</p>
+      <ul>
+        <li><strong>Service Providers:</strong> Third-party companies who help with hosting, payments, analytics, marketing, and customer support. These providers are contractually obligated to keep your data confidential and secure.</li>
+        <li><strong>Legal Compliance:</strong> Disclosure may occur to comply with laws, government requests, or legal proceedings.</li>
+        <li><strong>Business Transfers:</strong> In events like mergers or sales, your information may be transferred as part of the business assets.</li>
+        <li><strong>Third-Party Advertising Partners:</strong> Only with your consent, for targeted advertising and audience analytics.</li>
+      </ul>
+      <p>We never sell your personal data to third parties for profit.</p>
+    </div>
+
+    <div>
+      <h2>9. Automated Decision Making and Profiling</h2>
+      <p>We may use automated systems to assist with service personalization, fraud prevention, or marketing analytics. These decisions are based on algorithms analyzing your interaction data and preferences.</p>
+      <p>You have the right to request human review of any automated decision that significantly affects you. We ensure that important decisions are not made solely on automated profiling without appropriate safeguards.</p>
+    </div>
+
+    <div>
+      <h2>10. Data Retention</h2>
+      <p>We retain your personal data only as long as necessary to provide the services, comply with legal requirements, resolve disputes, and enforce our agreements. Specific retention periods depend on the type of data and its purpose.</p>
+      <p>Once your data is no longer required, it is securely deleted or anonymized.</p>
+    </div>
+
+    <div>
+      <h2>11. International Data Transfers</h2>
+      <p>Xensroot Garden Services is headquartered in the United States. Your information may be processed and stored in the US or other countries where we or our service providers operate. International transfers are subject to appropriate safeguards to maintain data privacy and security.</p>
+      <p>We implement measures such as standard contractual clauses, certifications, or legal frameworks to ensure your data remains protected regardless of location.</p>
+    </div>
+
+    <div>
+      <h2>12. Children’s Privacy</h2>
+      <p>Our website and services are not intended for anyone under the age of 16. We do not knowingly collect personal data from children without parental consent. If we discover that we have inadvertently collected such data, we will promptly delete it.</p>
+    </div>
+
+    <div>
+      <h2>13. Third-Party Websites and Links</h2>
+      <p>Our website may contain links to third-party sites for your convenience or reference. These sites have independent privacy policies and practices that we do not control. We encourage you to review their privacy policies when visiting these sites.</p>
+    </div>
+
+    <div>
+      <h2>14. Accessibility Commitment</h2>
+      <p>We are committed to making our website and services accessible to all users, including those with disabilities. We strive to comply with best practices and relevant accessibility standards. If you encounter any barriers or need assistance accessing information, please contact us.</p>
+    </div>
+
+    <div>
+      <h2>15. How We Protect Your Data from Breaches</h2>
+      <p>We have implemented comprehensive security protocols to protect your data from unauthorized access, theft, or loss. Our approach includes:</p>
+      <ul>
+        <li>Ongoing monitoring and threat detection</li>
+        <li>Incident response plans and team readiness</li>
+        <li>Secure backup and disaster recovery strategies</li>
+      </ul>
+      <p>In the rare event of a data breach involving your personal information, we commit to promptly notify you and relevant regulatory bodies in accordance with applicable laws.</p>
+    </div>
+
+    <div>
+      <h2>16. Policy Updates</h2>
+      <p>This Privacy Policy may be updated periodically to reflect changes in our practices or legal requirements. We recommend reviewing this page regularly to stay informed of any updates. Significant changes will be communicated via our website or direct notification where appropriate.</p>
+      <p>The effective date of this policy is noted at the top of the page.</p>
+    </div>
+
+    <div>
+      <h2>17. Contact Information</h2>
+      <p>If you have any questions, concerns, or requests about this Privacy Policy or your personal data, please reach out to us using the following:</p>
+      <address>
+        <strong>Xensroot Garden Services</strong><br />
+        47 W 13th St, New York, NY 10011, USA<br />
+        Phone: <a href="tel:+12345678900" aria-label="Call Xensroot Garden Services">+1 (234) 567-8900</a><br />
+        Email: <a href="mailto:privacy@xensrootgarden.com">privacy@xensrootgarden.com</a>
+      </address>
+    </div>
+
+    <div>
+      <h2>18. Additional Resources</h2>
+      <p>For more information about data privacy laws and your rights, you may consider visiting the following resources:</p>
+      <ul>
+        <li><a href="https://gdpr-info.eu/" target="_blank" rel="noopener noreferrer">General Data Protection Regulation (GDPR) Info</a></li>
+        <li><a href="https://oag.ca.gov/privacy/ccpa" target="_blank" rel="noopener noreferrer">California Consumer Privacy Act (CCPA)</a></li>
+        <li><a href="https://www.ftc.gov/tips-advice/business-center/privacy-and-security" target="_blank" rel="noopener noreferrer">U.S. Federal Trade Commission (FTC) Privacy &amp; Security</a></li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer id="contact" role="contentinfo" tabindex="0">
+  <p>Address: 47 W 13th St, New York, NY 10011, USA</p>
+  <p>Phone: <a href="tel:+12345678900" aria-label="Call Xensroot Garden Services">+1 (234) 567-8900</a></p>
+  <p>&copy; 2024 Xensroot Garden Services. All rights reserved.</p>
+</footer>
+</body>
+</html>
+

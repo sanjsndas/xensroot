@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Contact Us - Xensroot Garden Services</title>
+<style>
+  :root {
+    --font-sans: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+      Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    /* Blue green theme colors consistent with other pages */
+    --color-text-primary: #0b4a49; /* Dark teal blue-green */
+    --color-text-secondary: #4a6e6d; /* muted teal */
+    --color-bg: #ffffff;
+    --color-accent: #317773; /* medium teal */
+    --color-shadow: rgba(49, 119, 115, 0.1);
+    --color-shadow-hover: rgba(49, 119, 115, 0.2);
+    --border-radius: 0.75rem;
+    --max-width: 1200px;
+    --spacing-section-vertical: 4rem;
+    --spacing-section-horizontal: 1.5rem;
+    --transition-speed: 0.3s;
+  }
+
+  /* Reset and base styles */
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    font-family: var(--font-sans);
+    background-color: var(--color-bg);
+    color: var(--color-text-secondary);
+    line-height: 1.75;
+    font-size: 18px;
+  }
+  h1, h2, h3 {
+    color: var(--color-text-primary);
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-weight: 700;
+  }
+  h1 {
+    font-size: 3rem;
+    line-height: 1.15;
+    font-weight: 800;
+  }
+  h2 {
+    font-size: 2rem;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+  }
+  h3 {
+    font-size: 1.5rem;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  p {
+    margin-top: 0;
+    margin-bottom: 1.25rem;
+    max-width: 860px;
+  }
+  ul {
+    list-style: disc;
+    margin-left: 1.75rem;
+    margin-bottom: 1.5rem;
+  }
+  a {
+    color: var(--color-accent);
+    text-decoration: none;
+    transition: color var(--transition-speed);
+  }
+  a:hover,
+  a:focus {
+    color: #255852;
+    outline: none;
+  }
+
+  .container {
+    max-width: var(--max-width);
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: var(--spacing-section-horizontal);
+    padding-right: var(--spacing-section-horizontal);
+  }
+
+  header {
+    position: sticky;
+    top: 0;
+    background-color: var(--color-bg);
+    z-index: 1000;
+    box-shadow: 0 2px 6px var(--color-shadow-hover);
+    padding: 1rem var(--spacing-section-horizontal);
+  }
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: var(--max-width);
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .logo {
+    font-weight: 800;
+    font-size: 1.5rem;
+    color: var(--color-text-primary);
+    letter-spacing: 0.05em;
+  }
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+  }
+  .nav-links a {
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--color-text-primary);
+    padding: 0.5rem 0;
+  }
+  .nav-links a:hover,
+  .nav-links a:focus {
+    color: var(--color-accent);
+    border-bottom: 3px solid var(--color-accent);
+  }
+
+  .hero {
+    text-align: center;
+    padding-top: 6rem;
+    padding-bottom: 3rem;
+  }
+
+  section {
+    padding-top: var(--spacing-section-vertical);
+    padding-bottom: var(--spacing-section-vertical);
+  }
+  section > div {
+    margin-bottom: 3rem;
+  }
+
+  /* Contact info card and form */
+  .contact-info-container {
+    display: flex;
+    gap: 3rem;
+    max-width: var(--max-width);
+    margin-left: auto;
+    margin-right: auto;
+    flex-wrap: wrap;
+  }
+  .contact-card {
+    flex: 1 1 320px;
+    background: #f6faf9;
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    box-shadow: 0 4px 10px var(--color-shadow);
+  }
+  .contact-card h3 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+  }
+  .contact-card address,
+  .contact-card p {
+    font-style: normal;
+    color: var(--color-text-secondary);
+    line-height: 1.5;
+  }
+  .contact-form {
+    flex: 2 1 480px;
+    background: #f6faf9;
+    border-radius: var(--border-radius);
+    padding: 2rem;
+    box-shadow: 0 4px 10px var(--color-shadow);
+  }
+  .contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  label {
+    font-weight: 600;
+    color: var(--color-text-primary);
+    margin-bottom: 0.5rem;
+    display: block;
+  }
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 2px solid #d1e2df;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    font-family: var(--font-sans);
+    color: var(--color-text-primary);
+    transition: border-color var(--transition-speed);
+  }
+  input[type="text"]:focus,
+  input[type="email"]:focus,
+  textarea:focus {
+    outline: none;
+    border-color: var(--color-accent);
+    box-shadow: 0 0 6px var(--color-shadow-hover);
+  }
+  textarea {
+    resize: vertical;
+    min-height: 120px;
+  }
+  button[type="submit"] {
+    align-self: flex-start;
+    background-color: var(--color-accent);
+    border: none;
+    color: white;
+    padding: 1rem 2.5rem;
+    border-radius: var(--border-radius);
+    font-weight: 700;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color var(--transition-speed);
+  }
+  button[type="submit"]:hover,
+  button[type="submit"]:focus {
+    background-color: #255852;
+    outline: none;
+  }
+
+  /* Additional Sections styling */
+  .faq-section div {
+    margin-bottom: 2rem;
+  }
+  .faq-section h3 {
+    cursor: default;
+  }
+
+  /* Responsive */
+  @media (max-width: 920px) {
+    .contact-info-container {
+      flex-direction: column;
+    }
+  }
+  @media (max-width: 480px) {
+    h1 {
+      font-size: 2.25rem;
+    }
+    .contact-card, .contact-form {
+      padding: 1.5rem;
+    }
+  }
+</style>
+</head>
+<body>
+<header>
+  <nav role="navigation" aria-label="Primary Navigation" class="container">
+    <div class="logo" tabindex="0" aria-label="Xensroot Garden Logo">Xensroot Garden</div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Service</a>
+      <a href="cookies.html">Cookies Policy</a>
+      <a href="contact.html" aria-current="page">Contact</a>
+    </div>
+  </nav>
+</header>
+<main>
+  <section class="hero" role="banner" aria-labelledby="contact-title">
+    <div class="container">
+      <h1 id="contact-title">Contact Xensroot Garden Services</h1>
+      <p>We’re here to help! Whether you have questions, need a custom garden consultation, or want to provide feedback, our friendly team is ready to assist you.</p>
+      <a href="#contact-form" class="btn-primary" style="background-color: var(--color-accent); color: white; padding: 1rem 2.5rem; border-radius: var(--border-radius); text-decoration: none; font-weight: 700; font-size: 1.25rem; display: inline-block; margin-top: 1rem;">Get In Touch</a>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <div class="contact-info-container container" role="region" aria-label="Contact information and support form">
+      <aside class="contact-card" aria-labelledby="contact-info-heading">
+        <h3 id="contact-info-heading">Contact Information</h3>
+        <address>
+          <p><strong>Address:</strong><br />
+          47 W 13th St<br />
+          New York, NY 10011, USA</p>
+          <p><strong>Phone:</strong> <a href="tel:+12345678900" aria-label="Call Xensroot Garden Services">+1 (234) 567-8900</a></p>
+          <p><strong>Email:</strong> <a href="mailto:info@xensrootgarden.com">info@xensrootgarden.com</a></p>
+        </address>
+        <p><strong>Business Hours:</strong><br />
+        Monday - Friday: 8:00 AM - 6:00 PM<br />
+        Saturday: 9:00 AM - 4:00 PM<br />
+        Sunday: Closed</p>
+      </aside>
+
+      <section class="contact-form" aria-labelledby="contact-form-heading">
+        <h3 id="contact-form-heading">Send Us a Message</h3>
+        <form id="contact-form" action="#" method="POST" novalidate>
+          <label for="name">Full Name <span aria-hidden="true" style="color:red;">*</span></label>
+          <input type="text" id="name" name="name" required aria-required="true" placeholder="Your full name"/>
+
+          <label for="email">Email Address <span aria-hidden="true" style="color:red;">*</span></label>
+          <input type="email" id="email" name="email" required aria-required="true" placeholder="you@example.com"/>
+
+          <label for="phone">Phone Number</label>
+          <input type="text" id="phone" name="phone" placeholder="+1 234 567 8900"/>
+
+          <label for="subject">Subject <span aria-hidden="true" style="color:red;">*</span></label>
+          <input type="text" id="subject" name="subject" required aria-required="true" placeholder="How can we help you?"/>
+
+          <label for="message">Message <span aria-hidden="true" style="color:red;">*</span></label>
+          <textarea id="message" name="message" rows="6" required aria-required="true" placeholder="Write your message here..."></textarea>
+
+          <button type="submit">Submit</button>
+        </form>
+      </section>
+    </div>
+  </section>
+
+  <section class="content-section container" aria-label="Frequently asked questions about contacting us">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-section">
+      <div>
+        <h3>How quickly can I expect a response?</h3>
+        <p>Our team strives to respond to all inquiries within 24-48 business hours. During peak seasons, response times may vary, but we prioritize urgent requests.</p>
+      </div>
+      <div>
+        <h3>Can I schedule a garden consultation online?</h3>
+        <p>Yes! Contact us through this form or by phone to schedule a personalized garden consultation. We'll coordinate with you to find a convenient time.</p>
+      </div>
+      <div>
+        <h3>What are your service areas?</h3>
+        <p>Currently, we provide services primarily within New York City and surrounding boroughs. For locations outside, please inquire for availability.</p>
+      </div>
+      <div>
+        <h3>Do you offer emergency services?</h3>
+        <p>We understand emergencies happen and offer limited emergency garden support. Please call us directly for urgent requests to check availability.</p>
+      </div>
+      <div>
+        <h3>How can I update or cancel a scheduled service?</h3>
+        <p>For updates or cancellations, please contact our customer support promptly by phone or email. Early notice helps us serve you better.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section container" aria-label="Contact tips and support resources">
+    <h2>Helpful Tips for Contacting Us</h2>
+    <p>To help us assist you effectively, please provide clear and detailed information in your messages, including:</p>
+    <ul>
+      <li>Your full name and contact details</li>
+      <li>Preferred contact method and best times to reach you</li>
+      <li>Details about your garden or service needs</li>
+      <li>Any specific questions or concerns</li>
+      <li>If applicable, photos or descriptions of your garden or issues</li>
+    </ul>
+    <p>Providing these details will enable us to respond promptly and tailor our services to your needs.</p>
+  </section>
+
+  <section class="content-section container" aria-label="Additional contact information and privacy">
+    <h2>Privacy and Security of Your Information</h2>
+    <p>We respect your privacy and handle your personal data securely as detailed in our <a href="privacy.html">Privacy Policy</a>. Your contact information is used solely for responding to your inquiries and improving our services.</p>
+    <p>If you have questions about how your information is handled or wish to request data access or deletion, please reach out via the contact details provided.</p>
+  </section>
+</main>
+
+<footer id="contact" role="contentinfo" tabindex="0">
+  <p>Address: 47 W 13th St, New York, NY 10011, USA</p>
+  <p>Phone: <a href="tel:+12345678900" aria-label="Call Xensroot Garden Services">+1 (234) 567-8900</a></p>
+  <p>&copy; 2024 Xensroot Garden Services. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
+

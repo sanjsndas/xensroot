@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Xensroot Garden Services</title>
+<style>
+  /* CSS Variables for typography and spacing */
+  :root {
+    --font-sans: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+      Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    /* Green blue theme colors */
+    --color-text-primary: #044d49; /* Dark teal green */
+    --color-text-secondary: #4b636e; /* muted blue-gray */
+    --color-bg: #ffffff;
+    --color-accent: #2c7a7b; /* bluish-green */
+    --border-radius: 0.75rem;
+    --shadow-light: 0 4px 8px rgb(44 122 123 / 0.1);
+    --shadow-hover: 0 8px 16px rgb(44 122 123 / 0.2);
+    --max-width: 1200px;
+    --spacing-section-vertical: 5rem;
+    --transition-speed: 0.3s;
+  }
+
+  /* Reset and base */
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    font-family: var(--font-sans);
+    background-color: var(--color-bg);
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+    font-size: 18px;
+  }
+  h1, h2, h3 {
+    color: var(--color-text-primary);
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-weight: 700;
+  }
+  h1 {
+    font-size: 3.25rem;
+    line-height: 1.1;
+  }
+  h2 {
+    font-size: 2.25rem;
+  }
+  h3 {
+    font-size: 1.5rem;
+  }
+  p {
+    margin-top: 0;
+    margin-bottom: 1.25rem;
+    max-width: 700px;
+  }
+  a {
+    color: var(--color-accent);
+    text-decoration: none;
+    transition: color var(--transition-speed);
+  }
+  a:hover,
+  a:focus {
+    color: #155e63; /* darker accent */
+    outline: none;
+  }
+
+  /* Container */
+  .container {
+    max-width: var(--max-width);
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  /* Sticky Header */
+  header {
+    position: sticky;
+    top: 0;
+    background-color: #ffffff;
+    z-index: 1000;
+    box-shadow: 0 2px 6px rgb(44 122 123 / 0.15);
+    padding: 1rem 1.25rem;
+  }
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: var(--max-width);
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .logo {
+    font-weight: 800;
+    font-size: 1.5rem;
+    color: var(--color-text-primary);
+    letter-spacing: 0.05em;
+  }
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+  }
+  .nav-links a {
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--color-text-primary);
+    padding: 0.5rem 0;
+  }
+  .nav-links a:hover,
+  .nav-links a:focus {
+    color: var(--color-accent);
+    border-bottom: 3px solid var(--color-accent);
+  }
+
+  /* Hero Section */
+  .hero {
+    text-align: center;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    color: var(--color-text-primary);
+  }
+  .hero h1 {
+    font-weight: 800;
+    margin-bottom: 0.75rem;
+  }
+  .hero p {
+    font-size: 1.125rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2rem;
+    font-weight: 500;
+    color: var(--color-text-secondary);
+  }
+  .btn-primary {
+    display: inline-block;
+    font-weight: 700;
+    font-size: 1.25rem;
+    background-color: var(--color-accent);
+    color: white;
+    padding: 1rem 3rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-light);
+    transition: background-color var(--transition-speed), box-shadow var(--transition-speed), transform var(--transition-speed);
+    cursor: pointer;
+    border: none;
+    text-decoration: none;
+  }
+  .btn-primary:hover,
+  .btn-primary:focus {
+    background-color: #155e63;
+    box-shadow: var(--shadow-hover);
+    transform: scale(1.05);
+    outline: none;
+  }
+
+  /* Sections */
+  section {
+    padding-top: var(--spacing-section-vertical);
+    padding-bottom: var(--spacing-section-vertical);
+  }
+
+  /* About Section */
+  .about {
+    text-align: center;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .about p {
+    font-size: 1.125rem;
+    color: var(--color-text-secondary);
+  }
+
+  /* Services Section */
+  .services {
+    max-width: var(--max-width);
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .services-header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  .services-image {
+    display: block;
+    max-width: 100%;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-light);
+    margin: 0 auto 3rem auto;
+  }
+  .service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem;
+  }
+  .service-card {
+    background-color: #f0f7f7;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-light);
+    padding: 2rem;
+    text-align: center;
+    transition: box-shadow var(--transition-speed), transform var(--transition-speed);
+    cursor: default;
+  }
+  .service-card:hover,
+  .service-card:focus-within {
+    box-shadow: var(--shadow-hover);
+    transform: translateY(-4px);
+  }
+  .service-icon {
+    width: 56px;
+    height: 56px;
+    margin-bottom: 1rem;
+    stroke: var(--color-accent);
+    stroke-width: 1.8;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+  .service-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--color-text-primary);
+  }
+  .service-desc {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    color: var(--color-text-secondary);
+    min-height: 4.5rem;
+  }
+  .service-price {
+    font-weight: 700;
+    color: var(--color-accent);
+    font-size: 1.125rem;
+  }
+
+  /* Customer Satisfaction Section */
+  .customer-sat {
+    background-color: #e6f0f0;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-light);
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 3rem 2rem;
+    text-align: center;
+  }
+  .customer-sat h2 {
+    margin-bottom: 2rem;
+  }
+  .sat-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+  }
+  .sat-item {
+    flex: 1 1 250px;
+    color: var(--color-text-primary);
+  }
+  .sat-item h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+  }
+  .sat-item p {
+    font-weight: 500;
+    color: var(--color-text-secondary);
+  }
+
+  /* Disclaimer Section */
+  .disclaimer {
+    font-size: 0.875rem;
+    color: #647d79;
+    max-width: var(--max-width);
+    margin: 3rem auto 0 auto;
+    padding: 0 1rem;
+    text-align: center;
+    line-height: 1.4;
+  }
+
+  /* Footer */
+  footer {
+    margin-top: 4rem;
+    padding: 2rem 1.25rem;
+    background-color: #044d49;
+    color: #c4dcdc;
+    font-size: 0.9rem;
+    text-align: center;
+  }
+  footer a {
+    color: #a4d4d1;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  footer a:hover,
+  footer a:focus {
+    text-decoration: underline;
+    outline: none;
+  }
+
+  /* Responsive */
+  @media (max-width: 640px) {
+    h1 {
+      font-size: 2.5rem;
+    }
+    .service-desc {
+      min-height: auto;
+    }
+    .sat-grid {
+      flex-direction: column;
+    }
+  }
+</style>
+</head>
+<body>
+<header>
+   <nav role="navigation" aria-label="Primary Navigation" class="container">
+    <div class="logo" tabindex="0" aria-label="Xensroot Garden Logo">Xensroot Garden</div>
+    <div class="nav-links">
+      <a href="index.html" aria-current="page">Home</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Service</a>
+      <a href="cookies.html">Cookies Policy</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <section class="hero" role="banner">
+    <div class="container">
+      <h1>Transform Your Outdoor Space with Xensroot Garden Services</h1>
+      <p>Your trusted partner for exquisite garden design, maintenance, and revitalization. Bringing nature's beauty right to your doorstep.</p>
+      <a href="#services" class="btn-primary" role="button">Explore Our Services</a>
+    </div>
+  </section>
+
+  <section class="about" aria-labelledby="about-heading">
+    <div class="container">
+      <h2 id="about-heading">About Xensroot Garden</h2>
+      <p>
+        At Xensroot Garden, we believe that a well-tended garden is the soul of every home. Our expert team combines horticultural passion with professional experience to create and maintain green sanctuaries that inspire and rejuvenate. Whether you desire a lush backyard, a decorative front garden, or a sustainable vegetable patch, we tailor each project to your vision and environment. Our commitment to sustainable gardening practices means we nurture your garden while respecting nature's cycles.
+      </p>
+      <p>
+        Our comprehensive services range from seasonal garden cleanups to personalized garden designs, lawn care, tree pruning, and irrigation solutions. Using modern techniques and eco-friendly products, Xensroot Garden ensures your outdoor space thrives year-round with minimal fuss. We also provide expert advice on plant selection, pest control, and garden lighting to maximize your garden's beauty and functionality.
+      </p>
+      <p>
+        Join hundreds of satisfied customers who have transformed their gardens and enhanced their home's curb appeal with Xensroot Garden. Experience the joy of a vibrant, flourishing green space without the hassle.
+      </p>
+      <img src="p1.png" alt="Beautiful maintained garden with flowers and shrubs" width="1200" height="675" style="width:100%; border-radius: var(--border-radius); margin-top: 2rem; box-shadow: var(--shadow-light);" />
+    </div>
+  </section>
+
+  <section id="services" class="services" aria-labelledby="services-heading">
+    <div class="services-header container">
+      <h2 id="services-heading">Our Garden Services & Pricing</h2>
+      <p>Explore our wide range of expert garden services designed to meet your every outdoor need, crafted with care and attention.</p>
+    </div>
+    <img src="s1.jpg" alt="Professional gardener working on a lush garden" class="services-image" />
+    <div class="service-grid container">
+      <article class="service-card" tabindex="0" aria-label="Garden Design Service">
+        <svg class="service-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <circle cx="12" cy="12" r="10" />
+          <path d="M4 12h16M12 4v16" stroke-width="2" stroke="var(--color-accent)" fill="none" />
+        </svg>
+        <h3 class="service-title">Custom Garden Design</h3>
+        <p class="service-desc">Create your dream garden with personalized designs from our certified landscape architects. We plan for aesthetics and sustainability.</p>
+        <p class="service-price">Starting at $800</p>
+      </article>
+      <article class="service-card" tabindex="0" aria-label="Lawn Care Service">
+        <svg class="service-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <rect x="3" y="9" width="18" height="6" rx="1.5" ry="1.5" stroke="var(--color-accent)" stroke-width="2" fill="none" />
+          <path d="M3 9l6-6 6 6" stroke-width="2" stroke="var(--color-accent)" fill="none" />
+        </svg>
+        <h3 class="service-title">Lawn Care & Maintenance</h3>
+        <p class="service-desc">Comprehensive lawn mowing, fertilizing, aeration, and weed control services to keep your lawn healthy and lush.</p>
+        <p class="service-price">$120 / monthly plan</p>
+      </article>
+      <article class="service-card" tabindex="0" aria-label="Seasonal Cleanup Service">
+        <svg class="service-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M6 18v-6l6-3 6 3v6" stroke="var(--color-accent)" stroke-width="2" fill="none" />
+          <path d="M9 22h6" stroke="var(--color-accent)" stroke-width="2" fill="none" />
+        </svg>
+        <h3 class="service-title">Seasonal Cleanup</h3>
+        <p class="service-desc">Prepare your garden for spring or winter with deep cleaning, leaf removal, and plant protection services.</p>
+        <p class="service-price">$250 per session</p>
+      </article>
+      <article class="service-card" tabindex="0" aria-label="Tree & Shrub Care Service">
+        <svg class="service-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M12 3v18M9 21h6M9 3h6M6 12h12" stroke="var(--color-accent)" stroke-width="2" fill="none" />
+        </svg>
+        <h3 class="service-title">Tree & Shrub Care</h3>
+        <p class="service-desc">Expert pruning, trimming, pest control, and fertilizing tailored specifically for your trees and shrubs.</p>
+        <p class="service-price">Starting at $180</p>
+      </article>
+      <article class="service-card" tabindex="0" aria-label="Irrigation System Service">
+        <svg class="service-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <circle cx="12" cy="12" r="9" stroke="var(--color-accent)" stroke-width="2" fill="none" />
+          <path d="M12 3v9l6 3" stroke="var(--color-accent)" stroke-width="2" fill="none" />
+        </svg>
+        <h3 class="service-title">Irrigation Systems</h3>
+        <p class="service-desc">Installation and maintenance of automated irrigation systems to conserve water and keep your garden thriving.</p>
+        <p class="service-price">Custom quotes available</p>
+      </article>
+      <article class="service-card" tabindex="0" aria-label="Garden Lighting Service">
+        <svg class="service-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <circle cx="12" cy="12" r="5" stroke="var(--color-accent)" stroke-width="2" fill="none"/>
+          <path d="M12 7v10M7 12h10" stroke="var(--color-accent)" stroke-width="2" fill="none"/>
+        </svg>
+        <h3 class="service-title">Garden Lighting</h3>
+        <p class="service-desc">Design and installation of subtle outdoor lighting to create stunning ambiance and enhance security.</p>
+        <p class="service-price">From $400</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="satisfaction" class="customer-sat" aria-labelledby="customer-sat-heading" tabindex="0">
+    <h2 id="customer-sat-heading">Customer Satisfaction</h2>
+    <div class="sat-grid">
+      <div class="sat-item">
+        <h3>Certified Experts</h3>
+        <p>Our team consists of licensed horticulturists and landscape designers ensuring top-notch service quality.</p>
+      </div>
+      <div class="sat-item">
+        <h3>Eco-Friendly Practices</h3>
+        <p>We prioritize sustainable materials and environmentally friendly methods for a greener tomorrow.</p>
+      </div>
+      <div class="sat-item">
+        <h3>Timely & Reliable</h3>
+        <p>We value your time and guarantee punctuality and adherence to promised schedules.</p>
+      </div>
+      <div class="sat-item">
+        <h3>Personalized Solutions</h3>
+        <p>Every garden is unique. We create custom service plans tailored to your space and preference.</p>
+      </div>
+      <div class="sat-item">
+        <h3>Customer Support</h3>
+        <p>Our support team is available 7 days a week to respond to your questions and concerns promptly.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="disclaimer" aria-label="Disclaimer and legal information" tabindex="0">
+    <p>
+      Disclaimer: While Xensroot Garden strives to provide exceptional garden services, results may vary due to weather conditions, soil quality, and plant health. Customers are advised to discuss their garden specifics with our experts to understand any limitations. Xensroot Garden is not responsible for unforeseen damages or outcomes resulting from natural events or external factors beyond our control.
+    </p>
+    <p>
+      All pricing is subject to site inspection and project scope confirmation. Prices listed are base rates and may vary depending on customization and garden size. Please contact us for a detailed quote.
+    </p>
+  </section>
+</main>
+
+<footer id="contact" role="contentinfo" tabindex="0">
+  <p>Address: 47 W 13th St, New York, NY 10011, USA</p>
+  <p>Phone: <a href="tel:+12345678900" aria-label="Call Xensroot Garden Services">+1 (234) 567-8900</a></p>
+  <p>&copy; 2024 Xensroot Garden Services. All rights reserved.</p>
+</footer>
+</body>
+</html>
+

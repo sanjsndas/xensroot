@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Terms of Service - Xensroot Garden Services</title>
+<style>
+  :root {
+    --font-sans: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+      Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    /* Blue green theme colors */
+    --color-text-primary: #0b4a49; /* Dark teal blue-green */
+    --color-text-secondary: #4a6e6d; /* muted teal */
+    --color-bg: #ffffff;
+    --color-accent: #317773; /* medium teal */
+    --border-radius: 0.75rem;
+    --shadow-light: 0 4px 8px rgb(49 119 115 / 0.1);
+    --max-width: 1200px;
+    --spacing-section-vertical: 4rem;
+    --spacing-section-horizontal: 1.5rem;
+    --transition-speed: 0.3s;
+  }
+
+  /* Reset and base */
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    font-family: var(--font-sans);
+    background-color: var(--color-bg);
+    color: var(--color-text-secondary);
+    line-height: 1.7;
+    font-size: 18px;
+  }
+  h1, h2, h3 {
+    color: var(--color-text-primary);
+    margin-top: 0;
+    margin-bottom: 1.25rem;
+    font-weight: 700;
+  }
+  h1 {
+    font-size: 3rem;
+    line-height: 1.2;
+    font-weight: 800;
+  }
+  h2 {
+    font-size: 2rem;
+    margin-top: 3rem;
+  }
+  h3 {
+    font-size: 1.25rem;
+    margin-top: 2.5rem;
+  }
+  p, ul, ol {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    max-width: 900px;
+  }
+  ul, ol {
+    padding-left: 1.75rem;
+  }
+  a {
+    color: var(--color-accent);
+    text-decoration: none;
+    transition: color var(--transition-speed);
+  }
+  a:hover,
+  a:focus {
+    color: #1f5f59;
+    outline: none;
+  }
+
+  .container {
+    max-width: var(--max-width);
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: var(--spacing-section-horizontal);
+    padding-right: var(--spacing-section-horizontal);
+  }
+
+  header {
+    position: sticky;
+    top: 0;
+    background-color: var(--color-bg);
+    z-index: 1000;
+    box-shadow: 0 2px 6px rgb(49 119 115 / 0.25);
+    padding: 1rem var(--spacing-section-horizontal);
+  }
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: var(--max-width);
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .logo {
+    font-weight: 800;
+    font-size: 1.5rem;
+    color: var(--color-text-primary);
+    letter-spacing: 0.05em;
+  }
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+  }
+  .nav-links a {
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--color-text-primary);
+    padding: 0.5rem 0;
+  }
+  .nav-links a:hover,
+  .nav-links a:focus {
+    color: var(--color-accent);
+    border-bottom: 3px solid var(--color-accent);
+  }
+
+  .hero {
+    text-align: center;
+    padding-top: 6rem;
+    padding-bottom: 4rem;
+    color: var(--color-text-primary);
+  }
+
+  section.terms-content {
+    padding-bottom: var(--spacing-section-vertical);
+  }
+  section.terms-content > div {
+    margin-bottom: 3rem;
+  }
+
+  footer {
+    margin-top: 4rem;
+    padding: 2rem var(--spacing-section-horizontal);
+    background-color: #e1f0ed;
+    color: var(--color-text-primary);
+    font-size: 0.9rem;
+    text-align: center;
+  }
+  footer a {
+    color: var(--color-accent);
+    text-decoration: none;
+    font-weight: 600;
+  }
+  footer a:hover,
+  footer a:focus {
+    text-decoration: underline;
+    outline: none;
+  }
+
+  @media (max-width: 640px) {
+    h1 {
+      font-size: 2.25rem;
+    }
+    .container {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+  }
+</style>
+</head>
+<body>
+<header>
+  <nav role="navigation" aria-label="Primary Navigation" class="container">
+    <div class="logo" tabindex="0" aria-label="Xensroot Garden Logo">Xensroot Garden</div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html" aria-current="page">Terms of Service</a>
+       <a href="cookies.html">Cookies policy</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+</header>
+<main>
+  <section class="hero" role="banner" aria-labelledby="terms-title">
+    <div class="container">
+      <h1 id="terms-title">Terms of Service</h1>
+      <p>Welcome to Xensroot Garden Services. By accessing or using our website and services, you agree to comply with and be bound by the following terms and conditions. Please read them carefully.</p>
+    </div>
+  </section>
+
+  <section class="terms-content container" aria-label="Terms of service content">
+    <div>
+      <h2>1. Acceptance of Terms</h2>
+      <p>These Terms of Service ("Terms") govern your use of the Xensroot Garden Services website and related services ("Services"). By accessing or using our Services, you acknowledge that you have read, understood, and agree to be bound by these Terms.</p>
+      <p>If you do not agree to all terms, please do not use our Services.</p>
+    </div>
+
+    <div>
+      <h2>2. Eligibility</h2>
+      <p>You must be at least 18 years old and capable of entering into a binding contract to use our Services. By using the Services, you represent and warrant that you meet these requirements.</p>
+    </div>
+
+    <div>
+      <h2>3. Description of Services</h2>
+      <p>Xensroot Garden Services provides professional gardening, landscaping, maintenance, and related services as described on our website. We reserve the right to modify, suspend, or discontinue any aspect of the Services at any time without prior notice.</p>
+      <p>All service descriptions, pricing, and availability are subject to change and we encourage you to contact us directly for detailed quotations and inquiries.</p>
+    </div>
+
+    <div>
+      <h2>4. User Responsibilities</h2>
+      <p>By using our Services, you agree to:</p>
+      <ul>
+        <li>Provide accurate, current, and complete information as requested.</li>
+        <li>Maintain the confidentiality of your account credentials, if applicable.</li>
+        <li>Use the Services lawfully and in accordance with all applicable laws and regulations.</li>
+        <li>Not engage in any conduct that may disrupt, damage, or interfere with the Services or other users' experiences.</li>
+        <li>Comply with any additional guidelines, rules, or policies posted on our website.</li>
+      </ul>
+    </div>
+
+    <div>
+      <h2>5. Intellectual Property</h2>
+      <p>All content, trademarks, logos, images, designs, and software associated with Xensroot Garden Services are the exclusive property of Xensroot Garden or its licensors. You agree not to reproduce, distribute, modify, create derivative works, publicly display or use any intellectual property without our prior written consent.</p>
+    </div>
+
+    <div>
+      <h2>6. Payments and Refunds</h2>
+      <p>Payments for services are processed as per agreed quotes and schedules. We accept payments through authorized payment gateways or as otherwise agreed.</p>
+      <p>Refunds, if applicable, will be handled at our discretion and in accordance with the nature of the service and circumstances. Please contact our support team for any refund requests or billing inquiries.</p>
+    </div>
+
+    <div>
+      <h2>7. Limitation of Liability</h2>
+      <p>To the maximum extent permitted by law, Xensroot Garden Services, its affiliates, employees, and partners shall not be liable for any indirect, incidental, consequential, or punitive damages arising from your use of the Services.</p>
+      <p>We disclaim liability for damages caused by factors beyond our control, including weather conditions, acts of nature, or third-party actions.</p>
+    </div>
+
+    <div>
+      <h2>8. Indemnification</h2>
+      <p>You agree to indemnify and hold harmless Xensroot Garden Services and its representatives against any claims, damages, liabilities, losses, and expenses arising out of your breach of these Terms or your misuse of the Services.</p>
+    </div>
+
+    <div>
+      <h2>9. Governing Law and Dispute Resolution</h2>
+      <p>These Terms are governed by and construed in accordance with the laws of the state of New York, United States.</p>
+      <p>Any disputes arising relating to these Terms or use of the Services shall be resolved through good-faith negotiations. If unresolved, disputes may be subject to binding arbitration or litigation in the courts of New York.</p>
+    </div>
+
+    <div>
+      <h2>10. Termination</h2>
+      <p>We reserve the right to suspend or terminate your access to the Services at any time, without notice, for violations of these Terms or if deemed necessary to protect our interests or other users.</p>
+      <p>Termination does not affect any accrued rights or liabilities.</p>
+    </div>
+
+    <div>
+      <h2>11. Changes to Terms</h2>
+      <p>Xensroot Garden Services may update these Terms from time to time. We will notify you of material changes by posting updated Terms on our website and updating the effective date.</p>
+      <p>Your continued use of the Services after changes constitutes acceptance of the revised Terms.</p>
+    </div>
+
+    <div>
+      <h2>12. Contact Information</h2>
+      <p>If you have questions about these Terms, please contact us at:</p>
+      <address>
+        <strong>Xensroot Garden Services</strong><br />
+        47 W 13th St, New York, NY 10011, USA<br />
+        Phone: <a href="tel:+12345678900" aria-label="Call Xensroot Garden Services">+1 (234) 567-8900</a><br />
+        Email: <a href="mailto:support@xensrootgarden.com">support@xensrootgarden.com</a>
+      </address>
+    </div>
+  </section>
+</main>
+
+<footer id="contact" role="contentinfo" tabindex="0">
+  <p>Address: 47 W 13th St, New York, NY 10011, USA</p>
+  <p>Phone: <a href="tel:+12345678900" aria-label="Call Xensroot Garden Services">+1 (234) 567-8900</a></p>
+  <p>&copy; 2024 Xensroot Garden Services. All rights reserved.</p>
+</footer>
+</body>
+</html>
+
