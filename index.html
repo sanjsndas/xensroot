@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,17 +28,7 @@
   *, *::before, *::after {
     box-sizing: border-box;
   }
-
-
-
-
-
-
-
-
-
-
-  
+  body {
     margin: 0;
     font-family: var(--font-sans);
     background-color: var(--color-bg);
@@ -329,9 +320,13 @@
 <body>
 <header>
    <nav role="navigation" aria-label="Primary Navigation" class="container">
-   
+    <div class="logo" tabindex="0" aria-label="Xensroot Garden Logo">Xensroot Garden</div>
     <div class="nav-links">
-     
+      <a href="index.html" aria-current="page">Home</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Service</a>
+      <a href="cookies.html">Cookies Policy</a>
+      <a href="contact.html">Contact</a>
     </div>
   </nav>
 </header>
@@ -460,17 +455,6 @@
   </section>
 </main>
 
-
-
-
-
-
-
-
-
-
-
-  
 <footer id="contact" role="contentinfo" tabindex="0">
   <p>Address: 47 W 13th St, New York, NY 10011, USA</p>
   <p>Phone: <a href="tel:+12345678900" aria-label="Call Xensroot Garden Services">+1 (234) 567-8900</a></p>
